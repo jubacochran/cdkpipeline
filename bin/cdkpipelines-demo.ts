@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { App } from '@aws-cdk/core';
 import { CdkpipelinesDemoPipelineStack } from '../lib/cdkpipelines-test-pipeline-stack';
 
