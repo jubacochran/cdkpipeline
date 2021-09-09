@@ -2,6 +2,7 @@
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
 import { CdkpipelineTestStack } from '../lib/cdkpipeline-test-stack';
+import { CdkpipelinesDemoPipelineStack } from '../lib/cdkpipelines-test-pipeline-stack';
 
 const app = new cdk.App();
 new CdkpipelineTestStack(app, 'CdkpipelineTestStack', {
@@ -18,4 +19,8 @@ new CdkpipelineTestStack(app, 'CdkpipelineTestStack', {
   // env: { account: '123456789012', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+});
+
+new CdkpipelinesDemoPipelineStack(app, 'CdkpipelinesDemoPipelineStack', {
+  env: { account: '236719679879', region: 'eu-west-3' },
 });
